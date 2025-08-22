@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div class="navbar bg-base-100">
+  <div class="navbar bg-violet-500/10">
     <div class="flex-1">
       <a class="btn btn-ghost text-xl">Winona</a>
     </div>
@@ -8,7 +8,6 @@
       <ul class="menu menu-horizontal px-1">
         <li>
           <label class="swap swap-rotate">
-          <!-- this hidden checkbox controls the state -->
           <input type="checkbox" class="theme-controller" v-model="isDark" />
 
           <!-- sun icon -->
@@ -33,7 +32,7 @@
       </ul>
     </div>
   </div>
-    <slot />
+  <slot />
 </div>
 </template>
 

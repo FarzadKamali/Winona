@@ -12,14 +12,14 @@
       <div v-else>
         <div class="card bg-base-100 card-xl shadow-sm">
           <div class="card-body">
-          <div class="text-right">
-            <nuxt-link to="/" class="btn btn-xs btn-outline">Back</nuxt-link>
+          <div>
+            <nuxt-link to="/" class="btn btn-xs btn-ghost">< Back</nuxt-link>
           </div>
-            <h2 class="card-title text-1xl">{{ page.title }}</h2>
+            <h2 class="card-title text-1xl font-serif">{{ page.title }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 mb-4">
               <div class="text-xs text-gray-400"><span class="font-bold">Publish date:</span> {{ page.datePublished }} | <span class="font-bold">Modified date:</span> {{ page.dateModified }}</div>
             </div>
-            <div v-html="page.body"></div>
+            <div class="mb-3" v-html="page.body"></div>
             <div class="text-xs text-gray-400">Reviwer: <span class="font-bold">{{ page.reviewer.credentials }} {{ page.reviewer.name }}</span> in affiliation with: <span class="font-bold">{{ page.reviewer.affiliation }}</span></div>
             </div>
           </div>

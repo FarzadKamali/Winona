@@ -3,7 +3,7 @@
     <div class="p-6">
       <h1 class="text-2xl font-bold mb-4">Articles</h1>
 
-      <div v-if="pending" class="spinner-box">
+      <div v-if="pending" class="spinner-box fixed flex justify-center items-center z-999 w-dvw h-dvh bg-slate-100/80 top-0 left-0">
         <span class="loading loading-spinner loading-xl"></span>
       </div>
       
@@ -15,10 +15,10 @@
       </div>
 
       <div v-if="data" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
-        <div class="card bg-base-200 shadow-sm" v-for="page in data" :key="page.id">
+        <div class="card shadow-sm border border-violet-500/20" v-for="page in data" :key="page.id">
           <div class="card-body">
-            <p class="prose-xs text-neutral-400">{{ page.datePublished }}</p>
-            <h2 class="card-title">{{ page.title }}</h2>
+            <span class="prose-xs text-neutral-400">{{ page.datePublished }}</span>
+            <h2 class="card-title font-serif h-22 truncate-3 item-baseline">{{ page.title }}kjsdfkj kjwehfjke kjherfjk kjwhej ejher ewr ewrwer sdf dd werwerwe werwer</h2>
             <div class="card-actions justify-end">
               <nuxt-link class="btn btn-xs lg:btn-sm btn-outline" :to="`/pages/${page.id}`">Read more...</nuxt-link>
             </div>
@@ -34,16 +34,10 @@
 </script>
 
 <style lang="scss">
-  .spinner-box{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparentize(#ffffff, .15);
-    z-index: 9999;
-  }
+.truncate-3{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 </style>
