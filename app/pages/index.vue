@@ -18,7 +18,7 @@
         <div class="card shadow-sm border border-violet-500/20" v-for="page in data" :key="page.id">
           <div class="card-body">
             <span class="prose-xs text-neutral-400">{{ page.datePublished }}</span>
-            <h2 class="card-title font-serif h-22 truncate-3 item-baseline">{{ page.title }}kjsdfkj kjwehfjke kjherfjk kjwhej ejher ewr ewrwer sdf dd werwerwe werwer</h2>
+            <h2 class="card-title font-serif h-22 truncate-3 item-baseline">{{ page.title }}</h2>
             <div class="card-actions justify-end">
               <nuxt-link class="btn btn-xs lg:btn-sm btn-outline" :to="`/pages/${page.id}`">Read more...</nuxt-link>
             </div>
@@ -37,6 +37,7 @@
 .truncate-3{
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
