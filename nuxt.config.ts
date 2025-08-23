@@ -13,6 +13,12 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
+  app:{
+    head:{
+      title: "Winona"
+    }
+  },
+
   css: ['~/assets/main.css'],
   modules: ["@pinia/nuxt"],
   runtimeConfig: {
