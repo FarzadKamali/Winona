@@ -10,17 +10,15 @@
       </div>
 
       <div v-else>
+        <nuxt-link to="/" class="btn btn btn-ghost m-3 text-gray-600">< Back</nuxt-link>
         <div class="card bg-base-100 card-xl shadow-sm">
           <div class="card-body">
-          <div>
-            <nuxt-link to="/" class="btn btn-xs btn-ghost">< Back</nuxt-link>
-          </div>
-            <h2 class="card-title text-1xl font-serif">{{ page.title }}</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 mb-4">
-              <div class="text-xs text-gray-400"><span class="font-bold">Publish date:</span> {{ page.datePublished }} | <span class="font-bold">Modified date:</span> {{ page.dateModified }}</div>
+            <h2 class="card-title text-3xl mb-4">{{ page.title }}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-1">
+              <div class="text-sm text-gray-400"><span>Reviewed by: </span><span class="font-bold text-violet-300">{{ page.reviewer.credentials }} {{ page.reviewer.name }}</span></div>
+              <div class="text-xs text-gray-400 sm:justify-self-end"><span>Updated: </span><span>{{ page.dateModified }}</span></div>
             </div>
-            <div class="mb-3" v-html="page.body"></div>
-            <div class="text-xs text-gray-400">Reviwer: <span class="font-bold">{{ page.reviewer.credentials }} {{ page.reviewer.name }}</span> in affiliation with: <span class="font-bold">{{ page.reviewer.affiliation }}</span></div>
+            <div class="my-3" v-html="page.body"></div>
             </div>
           </div>
       </div>
@@ -44,7 +42,6 @@ watch(
   page,
   (article) => {
     if (article) {
-      // Update SEO meta only when 'page' data is available
       useSeoMeta({
         title: `Winona | ${article.seo?.title}` || 'Winona',
         description: article.seo?.description || 'Winona',

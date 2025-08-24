@@ -15,7 +15,10 @@ export default defineNuxtConfig({
 
   app:{
     head:{
-      title: "Winona"
+      title: "Winona",
+      link:[
+        { rel: 'icon', type: 'image/svg+html', href: '/favicon.svg' }
+      ]
     }
   },
 

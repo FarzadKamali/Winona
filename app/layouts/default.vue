@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div class="navbar bg-violet-500/10">
+  <div class="navbar bg-violet-100">
     <div class="flex-1">
       <a class="btn btn-ghost text-xl">Winona</a>
     </div>
