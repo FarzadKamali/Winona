@@ -2,6 +2,7 @@
 <div class="container mx-auto">
     <div class="p-6">
       <h1 class="text-2xl font-bold mb-4">Articles</h1>
+      <h2>A list of articles fetched from the API</h2>
 
       <div v-if="pending" class="spinner-box fixed flex justify-center items-center z-999 w-dvw h-dvh bg-slate-100/80 top-0 left-0">
         <span class="loading loading-spinner loading-xl"></span>
